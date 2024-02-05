@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header text-white p-4 rounded mb-4">
+      <h1 class="mb-0">Weather App</h1>
+    </header>
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="search-bar input-group">
+          <input type="text" id="cityInput" list="cities" class="form-control mb-2" placeholder="Enter a city">
+          <datalist id="cities">
+            <option value="Istanbul"></option>
+            <option value="Madrid"></option>
+            <option value="Toronto"></option>
+            <option value="Paris"></option>
+            <option value="Tokyo"></option>
+          </datalist>
+          <div class="input-group-append">
+            <button onclick="getWeather()" class="btn btn-light">&#128269; Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="weather-container card bg-light rounded">
+          <div id="weatherInfo" class="weather-info card-body"></div>
+          <div id="forecastContainer" class="forecast-container card-body"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-image: url('https://source.unsplash.com/1920x1080/?weather');
+}
+
+.container {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.weather-container {
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.weather-container.card {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+.list-group {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.list-group-item {
+  border-radius: 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.weather-info {
+  margin-bottom: 10px;
+}
+
+.weather-description {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.weather-icon {
+  max-width: 60px;
+  margin-bottom: 10px;
+}
+
+.forecast-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.forecast-item {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+}
+
+.forecast-item img {
+  display: block;
+  margin: 0 auto; 
+}
+
+
+.forecast-icon {
+  max-width: 40px;
+  margin-bottom: 5px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.header::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 50px;
+  height: 3px;
+  background-color: #fff;
+  transform: translateX(-50%);
+}
+
+/* Animasyon Eklenen Stiller */
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate__slideInUp {
+  animation-name: slideInUp;
+  animation-duration: 1s;
+}
